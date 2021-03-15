@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="56dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/editView6am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7" />
+
+            <TextView
+                android:id="@+id/editView7am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView8am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView9am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView10am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView11am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView12pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView1pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView2pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView3pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView4pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView5pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView6pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/editView7pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6am"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView7am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7am"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView8am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8am"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView9am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9am"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView10am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10am"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView11am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11am"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView12pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12pm"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView1pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1pm"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView2pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2pm"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView3pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3pm"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView4pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4pm"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+
+            <TextView
+                android:id="@+id/textView5pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5pm"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView6pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6pm"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <TextView
+                android:id="@+id/textView7pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7pm"
+                tools:layout_editor_absoluteX="73dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        tools:layout_editor_absoluteY="688dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
