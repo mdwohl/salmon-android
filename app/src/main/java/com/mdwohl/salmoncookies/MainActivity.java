@@ -1,5 +1,7 @@
 package com.mdwohl.salmoncookies;
 
+import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    public void onClickListener(View view){
+        Intent intent = new Intent(this, ContactPage.class);
+        startActivity(intent);
+
     }
 
     public List<Store> getStores() {

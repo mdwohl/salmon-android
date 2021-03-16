@@ -27,7 +27,21 @@ public class StoreLocationAdapter extends RecyclerView.Adapter <StoreLocationAda
     @Override
     public void onBindViewHolder(@NonNull viewStoreHolder holder, int position) {
         holder.locationName.setText(storeList.get(position).getLocation());
-        holder.sixAm.setText(storeList.get(position).getHourlySales());
+        holder.sixAm.setText(storeList.get(position).getDailySalesTotals().get(0).toString());
+        holder.sevenAm.setText(storeList.get(position).getDailySalesTotals().get(1).toString());
+        holder.eightAm.setText(storeList.get(position).getDailySalesTotals().get(2).toString());
+        holder.nineAm.setText(storeList.get(position).getDailySalesTotals().get(3).toString());
+        holder.tenAm.setText(storeList.get(position).getDailySalesTotals().get(4).toString());
+        holder.elevenAm.setText(storeList.get(position).getDailySalesTotals().get(5).toString());
+        holder.twelvePm.setText(storeList.get(position).getDailySalesTotals().get(6).toString());
+        holder.onePm.setText(storeList.get(position).getDailySalesTotals().get(7).toString());
+        holder.twoPm.setText(storeList.get(position).getDailySalesTotals().get(8).toString());
+        holder.threePm.setText(storeList.get(position).getDailySalesTotals().get(9).toString());
+        holder.fourPm.setText(storeList.get(position).getDailySalesTotals().get(10).toString());
+        holder.fivePm.setText(storeList.get(position).getDailySalesTotals().get(11).toString());
+        holder.sixPm.setText(storeList.get(position).getDailySalesTotals().get(12).toString());
+        holder.sevenPm.setText(storeList.get(position).getDailySalesTotals().get(13).toString());
+        holder.storeTotal.setText(storeList.get(position).getTotalsPerStore().toString());
     }
 
     @Override
@@ -36,6 +50,7 @@ public class StoreLocationAdapter extends RecyclerView.Adapter <StoreLocationAda
     }
 
     class viewStoreHolder extends RecyclerView.ViewHolder{
+
         public TextView locationName;
         public TextView sixAm;
         public TextView sevenAm;
@@ -51,6 +66,7 @@ public class StoreLocationAdapter extends RecyclerView.Adapter <StoreLocationAda
         public TextView fivePm;
         public TextView sixPm;
         public TextView sevenPm;
+        public TextView storeTotal;
 
         public viewStoreHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,6 +85,7 @@ public class StoreLocationAdapter extends RecyclerView.Adapter <StoreLocationAda
             this.fivePm = itemView.findViewById(R.id.editView5pm);
             this.sixPm = itemView.findViewById(R.id.editView6pm);
             this.sevenPm = itemView.findViewById(R.id.editView7pm);
+            this.storeTotal = itemView.findViewById(R.id.textViewTotal);
         }
     }
 }
