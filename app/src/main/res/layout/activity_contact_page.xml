@@ -8,60 +8,61 @@
     tools:context=".ContactPage">
 
 
-    <TextView
-        android:id="@+id/hours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
-        android:textSize="32sp"
-        android:layout_marginEnd="37dp"
-        android:text="@string/hours"
-        android:fontFamily="@font/anaheim"
-        app:layout_constraintEnd_toEndOf="@+id/address"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="37dp"
-        android:text="@string/email"
-        android:typeface="normal"
-        android:fontFamily="@font/anaheim"
-        app:layout_constraintStart_toStartOf="@+id/hours"
-        app:layout_constraintTop_toBottomOf="@+id/hours" />
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:fontFamily="@font/anaheim"
+            android:text="@string/about_us"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="159dp"
-        android:fontFamily="@font/anaheim"
-        android:text="@string/address"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        <TextView
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:fontFamily="@font/anaheim"
+            android:text="@string/hours"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/anaheim"
-        android:text="@string/phone"
-        app:layout_constraintStart_toStartOf="@+id/address"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:fontFamily="@font/anaheim"
+            android:text="@string/address"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="14dp"
-        android:text="@string/about_us"
-        android:fontFamily="@font/anaheim"
-        app:layout_constraintEnd_toEndOf="@+id/phone"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/anaheim"
+            android:text="@string/email"
+            android:textSize="20sp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/anaheim"
+            android:text="@string/phone"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
