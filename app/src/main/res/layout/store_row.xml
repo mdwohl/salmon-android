@@ -15,6 +15,7 @@
         tools:layout_editor_absoluteX="56dp" />
 
     <LinearLayout
+        android:id="@+id/table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -24,78 +25,94 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:fontFamily="monospace"
+            >
 
             <TextView
                 android:id="@+id/editView6am"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="parent"
                 android:text="7" />
 
             <TextView
                 android:id="@+id/editView7am"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView8am"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView9am"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView10am"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView11am"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView12pm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView1pm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView2pm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView3pm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView4pm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView5pm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView6pm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
 
             <TextView
                 android:id="@+id/editView7pm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fontFamily="parent"/>
         </LinearLayout>
 
         <LinearLayout
@@ -103,7 +120,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+          >
 
             <TextView
                 android:id="@+id/textView6am"
@@ -111,20 +129,24 @@
                 android:layout_height="wrap_content"
                 android:text="6am"
                 tools:layout_editor_absoluteX="73dp"
-                tools:layout_editor_absoluteY="208dp" />
+                tools:layout_editor_absoluteY="208dp"
+                android:fontFamily="@font/advent_pro_thin"/>
 
             <TextView
                 android:id="@+id/textView7am"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="7am"
                 tools:layout_editor_absoluteX="73dp"
-                tools:layout_editor_absoluteY="208dp" />
+                tools:layout_editor_absoluteY="208dp"
+                />
 
             <TextView
                 android:id="@+id/textView8am"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="8am"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -133,6 +155,7 @@
                 android:id="@+id/textView9am"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="9am"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -141,6 +164,7 @@
                 android:id="@+id/textView10am"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="10am"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -149,6 +173,7 @@
                 android:id="@+id/textView11am"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="11am"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -157,6 +182,7 @@
                 android:id="@+id/textView12pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="12pm"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -165,6 +191,7 @@
                 android:id="@+id/textView1pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="1pm"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -173,6 +200,7 @@
                 android:id="@+id/textView2pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="2pm"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -181,6 +209,7 @@
                 android:id="@+id/textView3pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="3pm"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -189,6 +218,7 @@
                 android:id="@+id/textView4pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="4pm"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -198,6 +228,7 @@
                 android:id="@+id/textView5pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="5pm"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -206,6 +237,7 @@
                 android:id="@+id/textView6pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="6pm"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -214,6 +246,7 @@
                 android:id="@+id/textView7pm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_thin"
                 android:text="7pm"
                 tools:layout_editor_absoluteX="73dp"
                 tools:layout_editor_absoluteY="208dp" />
@@ -222,6 +255,8 @@
     </LinearLayout>
 
     <TextView
+        app:layout_constraintTop_toBottomOf="@id/table"
+        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/textViewTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
