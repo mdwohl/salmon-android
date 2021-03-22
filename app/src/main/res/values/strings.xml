@@ -6,7 +6,6 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_contact_page">ContactPage</string>
@@ -14,5 +13,11 @@
     <string name="hours">All locations are open 6am - 8pm</string>
     <string name="address">400 Broad St, Seattle, WA 98109</string>
     <string name="phone">(206) 905-2100</string>
+    <string name="add_store">Add Store</string>
     <string name="about_us">Salmon Cookies: put a little Omega 3 in your morning routine!</string>
+    <string name="title_activity_add_store">AddStore</string>
+    <string name="store_location_placeholder">Store Location</string>
+    <string name="store_avg_sales_placeholder">Average Sales</string>
+    <string name="store_min_customer">Minimum Customers</string>
+    <string name="store_max_customer">Maximum Customers</string>
 </resources>

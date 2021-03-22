@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        List<Store> storeList = getStores();
+        StoreDatabase storeDatabase = StoreDatabase.get();
+        List<Store> storeList = storeDatabase.getmStores();
         RecyclerView recyclerView = findViewById(R.id.hour_rv);
         StoreLocationAdapter storeLocationAdapter = new StoreLocationAdapter(storeList);
         recyclerView.setAdapter(storeLocationAdapter);
@@ -34,20 +35,17 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void onClickListener(View view){
+    public void intentToContact(View view){
         Intent intent = new Intent(this, ContactPage.class);
         startActivity(intent);
 
     }
 
-    public List<Store> getStores() {
-        List<Store> storeList = new ArrayList();
-        storeList.add(new Store("Seattle", 6.3f, 23, 65));
-        storeList.add(new Store("Tokyo", 1.2f, 3, 24));
-        storeList.add(new Store("Dubai", 3.7f, 11, 38));
-        storeList.add(new Store("Paris", 2.3f, 20, 38));
-        storeList.add(new Store("Lima", 4.6f, 2, 16));
-        return storeList;
+    public void intentToAdd(View view){
+        Intent intent = new Intent(this, AddStore.class);
+        startActivity(intent);
     }
+
+
 
 }

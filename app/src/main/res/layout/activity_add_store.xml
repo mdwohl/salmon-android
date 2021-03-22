@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".AddStore">
+
+    <EditText
+        android:id="@+id/editTextLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="@string/store_location_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextAverageCustomerSales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/store_avg_sales_placeholder"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/editTextLocation"
+        app:layout_constraintStart_toStartOf="@+id/editTextLocation"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocation" />
+
+    <EditText
+        android:id="@+id/editTextMinCustomers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/store_min_customer"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAverageCustomerSales"
+        app:layout_constraintStart_toStartOf="@+id/editTextAverageCustomerSales"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAverageCustomerSales" />
+
+    <EditText
+        android:id="@+id/editTextMaxCustomers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/store_max_customer"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMinCustomers"
+        app:layout_constraintStart_toStartOf="@+id/editTextMinCustomers"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMinCustomers" />
+
+    <Button
+        android:id="@+id/buttonAddStore"
+        android:onClick="addStoreOnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_store"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMaxCustomers"
+        app:layout_constraintStart_toStartOf="@+id/editTextMaxCustomers"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMaxCustomers" />
+</androidx.constraintlayout.widget.ConstraintLayout>

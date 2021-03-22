@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalmonCookies">
         <activity
+            android:name=".AddStore"
+            android:label="@string/title_activity_add_store"
+            android:theme="@style/Theme.SalmonCookies.NoActionBar"></activity>
+        <activity
             android:name=".ContactPage"
             android:label="@string/title_activity_contact_page"
-            android:theme="@style/Theme.SalmonCookies.NoActionBar"></activity>
+            android:theme="@style/Theme.SalmonCookies.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
