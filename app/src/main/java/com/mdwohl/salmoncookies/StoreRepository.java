@@ -1,22 +1,43 @@
 package com.mdwohl.salmoncookies;
 
+import android.app.Application;
+import android.app.AsyncNotedAppOp;
+import android.os.AsyncTask;
+
+import androidx.lifecycle.LiveData;
+
+import java.util.List;
+
 public class StoreRepository {
     private final StoreDAO storeDAO;
-    private static volatile StoreRepository instance;
-    private StoreRepository(StoreDAO storeDAO){
-        this.storeDAO = storeDAO;
-        if(StoreRepository == null){
+    private LiveData<List<Store>> listAllStores;
 
-        }
+    public StoreRepository(Application application){
+       StoreDatabase db = StoreDatabase.getInstance(application);
+       storeDAO = db.storeDAO();
+       listAllStores = storeDAO.getAllStores();
+    };
+    //Repository API
+    public void insert(Store store){
+        new insertAsyncTask(storeDAO).execute(store);
+    }
+
+    public LiveData<List<Store>> getAllStores(){
+        return listAllStores;
     };
 
-    public final StoreRepository getInstance(StoreDAO storeDAO){
-        this.storeDAO;
-    }
+    private static class insertAsyncTask extends AsyncTask<Store, Void, Void> {
+        private final StoreDAO asyncDAO;
 
-    public void getStores() {
-    }
+        public insertAsyncTask(StoreDAO storeDAO) {
+            asyncDAO = storeDAO;
 
-    public void addStore(Store store) {
+        }
+
+        @Override
+        protected Void doInBackground(Store... stores) {
+            asyncDAO.addStore(stores[0]);
+            return null;
+        }
     }
 }

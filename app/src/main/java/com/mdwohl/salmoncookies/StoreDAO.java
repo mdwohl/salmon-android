@@ -2,28 +2,22 @@ package com.mdwohl.salmoncookies;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.Query;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class StoreDAO {
-    private List<Store> storeList;
-    private final MutableLiveData stores;
-    public final LiveData getStores(){
-        return this.stores;
-    };
+import static android.icu.text.MessagePattern.ArgType.SELECT;
 
-    public final void updateLiveData(){
-        this.stores.setValue(this.storeList);
-    }
+@Dao
 
-    public StoreDAO(){
-        this.stores = new MutableLiveData<>();
-        this.storeList = new ArrayList<>();
-    }
+public interface StoreDAO {
+  @Insert void addStore(Store store);
 
-    public addStore(){
-
-    }
+  @Query("SELECT * FROM `table` ORDER BY store_location DESC")
+  LiveData<List<Store>> getAllStores();
 }
+

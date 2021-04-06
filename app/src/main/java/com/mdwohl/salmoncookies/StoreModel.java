@@ -1,20 +1,23 @@
 package com.mdwohl.salmoncookies;
 
+import android.app.Application;
+
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.List;
+
 public class StoreModel extends ViewModel {
-    private final StoreRepository storeRepository;
-    public StoreModel(StoreRepository storeRepository){
-        super();
-        this.storeRepository = storeRepository;
+    private StoreRepository storeRepository;
+    private LiveData<List<Store>> storeList;
+
+    public LiveData<List<Store>> getStoreList() {
+        return storeList;
+    }
+
+    public StoreModel(@NonNull Application application){
+        storeRepository = new StoreRepository(application);
+        storeList = storeRepository.getAllStores();
     };
-
-    public final LiveData getStores(){
-        this.storeRepository.getStores();
-    }
-
-    public final void addStore(Store store){
-        this.storeRepository.addStore(store);
-    }
 }

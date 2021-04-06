@@ -1,15 +1,26 @@
 package com.mdwohl.salmoncookies;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+
+@Entity(tableName = "table")
 
 public class Store {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    private int id;
 
-    private String location;
-    private Float averageCookiesPerCustomer;
+
+    @ColumnInfo(name = "store_location") private String location;
+    @ColumnInfo(name = "average_cookies_per_customer") private Float averageCookiesPerCustomer;
     private Integer min;
     private Integer max;
-    private ArrayList<Integer> dailySalesTotals;
+    private List<Integer> dailySalesTotals;
     private Integer totalsPerStore;
 
     public Store(String location, Float averageCookiesPerCustomer, Integer min, Integer max) {
@@ -20,16 +31,6 @@ public class Store {
         this.dailySalesTotals = getDailySales();
         this.totalsPerStore = sumHourlySalesPerStore();
     }
-
-    public Store(){
-        location = "Seattle";
-        averageCookiesPerCustomer = 6.3f;
-        min = 23;
-        max = 65;
-        dailySalesTotals = getDailySales();
-        totalsPerStore = sumHourlySalesPerStore();
-
-    };
 
     public Integer getHourlyCustomers(){
        return Utility.randomIntInRange(this.min, this.max);
@@ -89,7 +90,7 @@ public class Store {
         this.max = max;
     }
 
-    public ArrayList<Integer> getDailySalesTotals() {
+    public List<Integer> getDailySalesTotals() {
         return dailySalesTotals;
     }
 
@@ -99,5 +100,9 @@ public class Store {
 
     public Integer getTotalsPerStore() {
         return totalsPerStore;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
