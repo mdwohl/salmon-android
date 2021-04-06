@@ -7,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.util.Log;
 import android.view.View;
@@ -20,16 +21,17 @@ public class AddStore extends AppCompatActivity {
     private EditText etStoreMinCustomers;
     private EditText etStoreMaxCustomers;
     private Button createStore;
-    private StoreDatabase storeDatabase;
-
+    private StoreModel storeModel;
+    private StoreModelFactory factory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_store);
+        factory = new StoreModelFactory(getApplication());
+        storeModel = new ViewModelProvider(this, factory).get(StoreModel.class);
         initUi();
-        storeDatabase = StoreDatabase.get();
-        }
+    }
 
     private void initUi() {
         etStoreLocation = findViewById(R.id.editTextLocation);
@@ -46,8 +48,6 @@ public class AddStore extends AppCompatActivity {
         Integer min = Integer.parseInt(String.valueOf(etStoreMinCustomers.getText()));
         Integer max = Integer.parseInt(String.valueOf(etStoreMaxCustomers.getText()));
         Store store = new Store(location, averagePerCust, min, max);
-        storeDatabase.addStore(store);
-
     }
 
     }

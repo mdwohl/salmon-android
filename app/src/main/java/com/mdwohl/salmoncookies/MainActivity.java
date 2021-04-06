@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,13 +17,17 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private StoreModel storeModel;
+    private StoreModelFactory factory;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        StoreDatabase storeDatabase = StoreDatabase.get();
-        List<Store> storeList = storeDatabase.getmStores();
+        factory = new StoreModelFactory(getApplication());
+        storeModel = new ViewModelProvider(this,factory).get(StoreModel.class);
         RecyclerView recyclerView = findViewById(R.id.hour_rv);
+        List<Store> storeList = storeModel.getStoreList().getValue();
         StoreLocationAdapter storeLocationAdapter = new StoreLocationAdapter(storeList);
         recyclerView.setAdapter(storeLocationAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
